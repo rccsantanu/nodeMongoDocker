@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  # Mongodb service
+  mongo_db_docker:
+    container_name: mongodb_container
+    image: mongo:latest
+    restart: always
+    ports:
+      - "${MONGODB_PORT_CONTAINER}:${MONGODB_PORT}"
+    volumes:
+      - mongo_data:/data/db
+
+  # Node api service
+  api:
+    build: .
+    ports:
+      # local->container
+      - "${PORT_CONTAINER}:${PORT}"
+    volumes:
+      - .:/usr/src/app
+    environment:
+      PORT: 3000
+      MONGODB_URI: mongodb://mongo_db_docker:${MONGODB_PORT}
+      DB_NAME: docker_noode
+    depends_on:
+      - mongo_db_docker
+
+volumes:
+  mongo_data: {}

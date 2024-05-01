@@ -1,36 +1,36 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 module.exports = () => {
   mongoose
     .connect(process.env.MONGODB_URI, {
       dbName: process.env.DB_NAME,
-      user: process.env.DB_USER,
-      pass: process.env.DB_PASS,
+      //user: process.env.DB_USER,
+      //pass: process.env.DB_PASS,
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      useFindAndModify: false
+      useFindAndModify: false,
     })
     .then(() => {
-      console.log('Mongodb connected....');
+      console.log("Mongodb connected....");
     })
-    .catch(err => console.log(err.message));
+    .catch((err) => console.log(err.message));
 
-  mongoose.connection.on('connected', () => {
-    console.log('Mongoose connected to db...');
+  mongoose.connection.on("connected", () => {
+    console.log("Mongoose connected to db...");
   });
 
-  mongoose.connection.on('error', err => {
+  mongoose.connection.on("error", (err) => {
     console.log(err.message);
   });
 
-  mongoose.connection.on('disconnected', () => {
-    console.log('Mongoose connection is disconnected...');
+  mongoose.connection.on("disconnected", () => {
+    console.log("Mongoose connection is disconnected...");
   });
 
-  process.on('SIGINT', () => {
+  process.on("SIGINT", () => {
     mongoose.connection.close(() => {
       console.log(
-        'Mongoose connection is disconnected due to app termination...'
+        "Mongoose connection is disconnected due to app termination..."
       );
       process.exit(0);
     });
