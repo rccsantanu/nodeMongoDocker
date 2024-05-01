@@ -1,1 +1,14 @@
-node_modules
+# Node.js specific
+node_modules/
+
+# Dependency lock files
+package-lock.json
+
+# Environment variables
+.env
+
+
+
+# Ignore the .git directory itself (if nested)
+.git/
+
