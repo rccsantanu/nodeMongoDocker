@@ -6,6 +6,14 @@ pipeline {
     }
 
     stages {
+
+        stage('Checkout') {
+            steps {
+                // Checkout the code from the Git repository
+                git branch: 'master',  url: 'https://github.com/rccsantanu/nodeMongoDocker.git'
+            }
+        }
+
         stage('Build') {
             steps {
                 script {
