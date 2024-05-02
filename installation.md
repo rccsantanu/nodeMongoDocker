@@ -1,16 +1,16 @@
 ## Prerequisites
 
-    - Jenkins Server: Ensure you have Jenkins installed and running.
-    - Docker Installed: Jenkins server should have Docker installed to interact with Docker containers.
+- Jenkins Server: Ensure you have Jenkins installed and running.
+- Docker Installed: Jenkins server should have Docker installed to interact with Docker containers.
 
-#Steps
+#$ Steps
 
-1.  Install Jenkins Plugins
+1.Install Jenkins Plugins
 
-        Install Docker Plugin in Jenkins
-          - In the "Available" tab, search for "Docker Pipeline"
-          - Locate the "Docker Pipeline" plugin and select the checkbox.
-          - Click "Install without restart" or "Download now and install after restart" if a restart is required.
+    Install Docker Plugin in Jenkins
+     - In the "Available" tab, search for "Docker Pipeline"
+     - Locate the "Docker Pipeline" plugin and select the checkbox.
+     - Click "Install without restart" or "Download now and install after restart" if a restart is required.
 
 2.  Configure Jenkins to Use Docker - Click on "Manage Jenkins" → "Global Tool Configuration". - Click on "Add Docker" under the "Docker installations" section. - Specify a name for this Docker installation (e.g., "docker"). - Install automatically: Jenkins can automatically install Docker for you. (Download)
 
