@@ -42,6 +42,10 @@ Steps
         sudo apt install -y docker-ce
     ```
 
-     ```bash
+    ```bash
         docker --version
+    ```
+
+    ```bash
+        $ npm install
     ```
