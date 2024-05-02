@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Initialize DB 1 2
+// Initialize DB 3
 require("./initDB")();
 
 const ProductRoute = require("./Routes/Product.route");
