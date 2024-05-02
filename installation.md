@@ -47,5 +47,9 @@ Steps
     ```
 
     ```bash
-        $ npm install
+        docker run -p 4000:3000 nodejs-rest-api
     ```
+
+```bash
+docker run -p 4000:3000 nodejs-rest-api
+```
