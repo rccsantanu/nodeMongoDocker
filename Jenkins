@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+
+    environment {
+        DOCKER_IMAGE = 'nodejs-rest-api'
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                script {
+                    docker.build("nodejs-rest-api", ".")
+                }
+            }
+        }
+
+        // stage('Test') {
+        //     steps {
+        //         sh 'docker compose run --rm api npm test'
+        //     }
+        // }
+
+        stage('Deploy') {
+            steps {
+                sh 'docker compose up -d'
+            }
+        }
+    }
+}
