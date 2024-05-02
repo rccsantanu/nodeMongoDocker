@@ -19,27 +19,27 @@ Steps
 ## how to install docker in aws ec2 instance of ubuntu server
 
 ```bash
-    sudo apt update
+sudo apt update
 ```
 
 ```bash
-    sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
+sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
 ```
 
 ```bash
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 ```
 
 ```bash
-    sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 ```
 
 ```bash
-        sudo apt update
+sudo apt update
 ```
 
 ```bash
-    sudo apt install -y docker-ce
+sudo apt install -y docker-ce
 ```
 
 ```bash
