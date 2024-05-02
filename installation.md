@@ -26,29 +26,25 @@ Steps
         sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
     ```
 
-    ```bash
+```bash
         curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-    ```
+```
 
-    ```bash
+```bash
         sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-    ```
+```
 
-    ```bash
+```bash
         sudo apt update
-    ```
+```
 
-     ```bash
+```bash
         sudo apt install -y docker-ce
-    ```
+```
 
-    ```bash
+```bash
         docker --version
-    ```
-
-    ```bash
-        docker run -p 4000:3000 nodejs-rest-api
-    ```
+```
 
 ```bash
 docker run -p 4000:3000 nodejs-rest-api
