@@ -9,7 +9,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                // Checkout the code from the Git repository 2
+                // Checkout the code from the Git repository 3
                 git branch: 'master',  url: 'https://github.com/rccsantanu/nodeMongoDocker.git'
             }
         }
