@@ -1,6 +1,9 @@
 const mongoose = require("mongoose");
 
 module.exports = () => {
+  console.log("santanu");
+  console.log(process.env.MONGODB_URI);
+  console.log("aich");
   mongoose
     .connect(process.env.MONGODB_URI, {
       dbName: process.env.DB_NAME,
