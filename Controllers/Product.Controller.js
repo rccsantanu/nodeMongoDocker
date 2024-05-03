@@ -109,7 +109,7 @@ module.exports = {
 
   testing: async (req, res, next) => {
     try {
-      res.send("Hello, this is a static message! v-03, santanu 01");
+      res.send("Hello, this is a static message! v-03, santanu 02");
     } catch (error) {
       console.log(error.message);
     }
