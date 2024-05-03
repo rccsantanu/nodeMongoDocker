@@ -7,7 +7,7 @@ services:
     image: mongo:latest
     restart: always
     ports:
-      - "${MONGODB_PORT_CONTAINER}:${MONGODB_PORT}"
+      - 2717:27017
     volumes:
       - mongo_data:/data/db
 
@@ -21,7 +21,7 @@ services:
       - .:/usr/src/app
     environment:
       PORT: 3000
-      MONGODB_URI: mongodb://mongo_db_docker:${MONGODB_PORT}
+      MONGODB_URI: mongodb://mongo_db_docker:27017
       DB_NAME: docker_noode
     depends_on:
       - mongo_db_docker
