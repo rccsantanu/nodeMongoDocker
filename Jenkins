@@ -37,7 +37,7 @@ pipeline {
                 sh 'npm install'
 
                 // Run the application using nodemon
-                sh 'npx nodemon app.js'
+                //sh 'npx nodemon app.js'
             }
         }
 
