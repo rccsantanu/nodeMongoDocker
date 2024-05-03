@@ -16,7 +16,7 @@ services:
     build: .
     ports:
       # local->container
-      - "${PORT_CONTAINER}:${PORT}"
+      - 5002:3000
     volumes:
       - .:/usr/src/app
     environment:
