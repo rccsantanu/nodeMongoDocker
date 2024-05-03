@@ -21,7 +21,8 @@ services:
       - .:/usr/src/app
     environment:
       PORT: 3000
-      MONGODB_URI: mongodb://mongo_db_docker:27017
+      # MONGODB_URI: mongodb://mongo_db_docker:27017
+      MONGODB_URI: mongodb://mongo_db_docker:27017/docker_noode
       DB_NAME: docker_noode
     depends_on:
       - mongo_db_docker
