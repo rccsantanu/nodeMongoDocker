@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # Install project dependencies using npm ci for a clean installation
-RUN npm ci
+RUN npm install
 
 # Copy the entire application code into the container (excluding node_modules which are installed in the previous step)
 COPY . .
